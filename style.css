@@ -29,10 +29,10 @@ header {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    height: 15em;
+    height: fit-content;
     border: 0px;
     border-bottom: 1px;
-    border-color: var(--selection-border-color);
+    border-color: var(--border-color);
     border-style: solid;
     align-items: center;
     justify-items: center;
@@ -43,8 +43,8 @@ header {
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 5;
-        height: 65%;
-        width: 60%;
+        height: 85%;
+        width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -61,6 +61,8 @@ header {
 
         .search {
             margin: 2%;
+            margin-top: 5%;
+            margin-bottom: 5%;
         }
     }
 
@@ -68,31 +70,40 @@ header {
         display: flex;
         grid-column-start: 7;
         grid-column-end: 10;
-        height: 50%;
+        height: 80%;
+        width: fit-content;
 
         #login {
             margin-top: 5%;
             margin-left: 2%;
             margin-right: 2%;
             display: flex;
-            height: 4em;
-            width: 11em;
+            height: 85%;
+            aspect-ratio: 3/1;
+            align-content: center;
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+                height: inherit;
+                aspect-ratio: 1/1;
+                margin: 6%;
+            }
 
 
             .loginimage {
                 border: 0px;
-                border-right: 2px;
-                border-color: aqua;
-                border-style: solid;
-                width: 4em;
-                height: 4em;
-                border-radius: 50%;
-                background-color: rgba(241, 239, 239, 0.7);
+                aspect-ratio: 1/1;
+                height: 100%;
+                background-color: unset;
+                background-image: url(fotos/6681204.png);
+                background-size: contain;
+                background-repeat: no-repeat;
             }
 
             .logintext {
-                width: 7em;
-                height: 4em;
+                width: fit-content;
+                height: inherit;
                 align-content: center;
                 margin-left: 2%;
             }
@@ -100,44 +111,64 @@ header {
 
         #cart {
             background-color: beige;
-            border-radius: 50%;
-            height: 3.5em;
-            width: 4em;
+            height: 85%;
+            aspect-ratio: 1/1;
             align-content: center;
             margin-top: 6%;
+            background-image: url(fotos/shopping-cart-logo-icon-shopping-cart.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+                height: inherit;
+                aspect-ratio: 1/1;
+                margin: 6%;
+            }
         }
 
         #favorites {
-            background-color: aquamarine;
-            height: 3.5em;
-            width: 3.5em;
+            height: 85%;
+            aspect-ratio: 1/1;
             border-radius: 50%;
             align-content: center;
             margin-top: 6%;
+            background-image: url(fotos/heart-outline-19.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+                height: inherit;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                margin: 6%;
+            }
         }
 
     }
 }
 
 footer {
-    min-height: 60em;
-    color: white;
+    min-height: fit-content;
     background-color: rgba(241, 239, 239, 0.3);
-    border-top: 1px;
     border: 0px;
     border-top: 1px;
     border-color: var(--selection-border-color);
     border-style: solid;
 
     .opties {
-        min-height: 20em;
+        aspect-ratio: 1/0.33;
         border: 0px;
         border-bottom: 1px;
         border-style: solid;
+        border-color: var(--selection-border-color);
     }
 
     .opmaakfooter {
-        min-height: 40em;
+        aspect-ratio: 1/0.65;
         display: grid;
         grid-template-columns: repeat(8, 12.5%);
         grid-template-rows: repeat(8, 12.5%);
@@ -187,32 +218,26 @@ footer {
 
 .maingrid {
     display: grid;
-    
     grid-template-columns: repeat(5, 20%);
     min-height: fit-content;
 
     .legeruimte {
-        background-color: unset;
         grid-column-start: 2;
         grid-column-end: 6;
         border: 1px;
-        border-top: 1px;
-        border-bottom: 1px;
-        border-left: 1px;
+        border-right: 0px;
         border-color: var(--border-color);
         border-style: solid;
-        min-height: 3em;
     }
 
-
     #productmenu {
-      grid-row-start: 1;
-      grid-row-end: 12;
+        grid-row-start: 1;
+        grid-row-end: 12;
     }
 
     #mainmenu {
-       grid-row-start: 4;
-       grid-row-end: 12;
+        grid-row-start: 4;
+        grid-row-end: 12;
     }
 
     .menu {
@@ -221,69 +246,69 @@ footer {
         background-color: var(--true-background-color);
         border: 0px;
         overflow-y: scroll;
-        color: white;
+        scrollbar-width: none;
 
         .dropdown {
-            width:inherit;
+            width: inherit;
             position: relative;
             height: 180%;
             align-content: center;
             font-size: larger;
         }
 
-        
+
         .dropdown-content {
             display: none;
-            background-color: rgba(124, 161, 199, 0.8);
+            background-color: rgba(124, 161, 199, 0.8); /*AANPASSEN*/
             width: inherit;
 
             a {
                 font-size: 125%;
-                color: white;
+                color: black;
                 text-decoration: none;
             }
         }
 
         .dropdown:hover .dropdown-content {
-
             display: block;
         }
     }
 
     #fotoextra {
-        overflow-x: auto;
         background-color: var(--selection-background-color);
-        margin-top: 2%;
-        margin-bottom: 2%;
-        margin-left: 5%;
+        margin: 2%;
+        margin-left: 10%;
+        margin-right: 10%;
+        aspect-ratio: 1/0.564;
         grid-row-start: 2;
         grid-column-start: 1;
         grid-column-end: 6;
-        border: 0px;
+        border: 1px;
         border-color: var(--selection-border-color);
         border-style: solid;
-        height: 30em;
-    }
-
-    #foto {
-        align-content: center;
-        margin: 5%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 100%;
-    }
-
-    #echtefoto {
         background-image: url(fotos/Nn3vQfT5fzwXUCo5yxw37WIf.jpg);
         background-repeat: no-repeat;
         background-size: contain;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        display: flex;
+    }
+
+    #koop {
+        font-size: larger;
+        align-content: center;
+        margin: 2%;
+        align-self: center;
+
+        #kooptekst {
+            color: black;
+            size: 80%;
+            max-width: fit-content;
+            text-wrap: wrap;
+        }
     }
 
     #fillerruimte {
         background-color: var(--true-background-color);
-        height: 4em;
+        aspect-ratio: 1/0.07;
         border-color: var(--border-color);
         border-style: solid;
     }
@@ -305,15 +330,11 @@ footer {
         grid-column-end: 6;
     }
 
-    #koop {
-        color: white;
-        font-size: larger;
-        width: fit-content;
-        align-content: center;
-
-        #kooptekst {
-            color: white;
-        }
+    .filler3 {
+        grid-column-start: 1;
+        border: 0px;
+        grid-column-start: 2;
+        grid-column-end: 6;
     }
 
     .view {
@@ -333,72 +354,81 @@ footer {
     }
 
     .buy {
-        height: 4em;
+        aspect-ratio: 1/0.07;
         background-color: var(--true-background-color);
         grid-column-start: 2;
         grid-column-end: 6;
         border: 0px;
-        border-top: 1px;
-        border-bottom: 1px;
         border-color: var(--border-color);
         border-style: solid;
 
-
         #android {
-
             height: fit-content;
+            border-top: 1px;
+            border-bottom: 1px;
         }
 
-        #onderdeel {}
+        #onderdeel {
+            border-top: 1px;
+            border-bottom: 1px;
+        }
 
         #review {}
     }
 }
 
 #androidGrid {
-
     display: flex;
 
     .android {
-        background-color: var(--placeholder-color);
         margin: var(--margin);
         min-width: 30%;
-        padding-top: 38%;
+        aspect-ratio: 1/1.365;
         margin-left: 5%;
         margin-right: 5%;
         background-size: contain;
         background-repeat: no-repeat;
+        align-content: flex-end;
     }
 
     #A1 {
         background-image: url(fotos/HW800.png);
-        background-color: unset;
     }
 
-    #A2 {}
+    #A2 {
+        background-image: url(fotos/AZ110_Android.png);
+    }
 
-    #A3 {}
+    #A3 {
+        background-image: url(fotos/CP100_Android.png);
+    }
 
-    #A4 {}
+    #A4 {
+        background-image: url(fotos/GJ200_android.png);
+    }
 
-    #A5 {}
+    #A5 {
+        background-image: url(fotos/android.png);
+    }
 
-    #A6 {}
+    #A6 {
+        background-image: url(fotos/NC200_Android.png);
+    }
 }
 
 #onderdeelGrid {
-
     display: flex;
 
     .onderdeel {
         background-color: var(--placeholder-color);
         margin: var(--margin);
         min-width: 30%;
-        padding-top: 38%;
+        aspect-ratio: 1/1.365;
         margin-left: 5%;
         margin-right: 5%;
         background-size: contain;
         background-repeat: no-repeat;
+        align-content: flex-end;
     }
 
     #O1 {}
@@ -413,27 +443,15 @@ footer {
 }
 
 #reviewGrid {
-
     display: flex;
 
     .review {
-        background-color: var(--placeholder-color);
+        background-color: unset;
         margin: var(--margin);
         min-width: 30%;
-        padding-top: 38%;
+        aspect-ratio: 1/1.365;
         margin-left: 5%;
         margin-right: 5%;
-        background-size: contain;
-        background-repeat: no-repeat;
+        font-size: larger;
     }
-
-    #R1 {}
-
-    #R2 {}
-
-    #R3 {}
-
-    #R4 {}
-
-    #R5 {}
 }
