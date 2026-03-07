@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --placeholder-color: lightblue;
+    --margin: 4%;
+    --true-background-color: rgba(108, 154, 204, 0.6);
+    --selection-background-color: rgba(241, 239, 239, 0.2);
+    --border-color: rgb(132, 191, 255);
+    --selection-border-color: white;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    background-image: url(fotos/futuristic-detroit-become-human-e3vakx08mu10tnli.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 15em;
+    border: 0px;
+    border-bottom: 1px;
+    border-color: var(--selection-border-color);
+    border-style: solid;
+    align-items: center;
+    justify-items: center;
+
+    #logo {
+        background-color: var(--placeholder-color);
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 5;
+        height: 65%;
+        width: 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #searchbar {
+        background-color: rgba(241, 239, 239, 0.7);
+        grid-column-start: 1;
+        grid-column-end: 10;
+        grid-row-start: 5;
+        grid-column-end: 10;
+        min-width: 70%;
+        min-height: 40%;
+        border-radius: 10px;
+
+        .search {
+            margin: 2%;
+        }
+    }
+
+    #allthree {
+        display: flex;
+        grid-column-start: 7;
+        grid-column-end: 10;
+        height: 50%;
+
+        #login {
+            margin-top: 5%;
+            margin-left: 2%;
+            margin-right: 2%;
+            display: flex;
+            height: 4em;
+            width: 11em;
+
+
+            .loginimage {
+                border: 0px;
+                border-right: 2px;
+                border-color: aqua;
+                border-style: solid;
+                width: 4em;
+                height: 4em;
+                border-radius: 50%;
+                background-color: rgba(241, 239, 239, 0.7);
+            }
+
+            .logintext {
+                width: 7em;
+                height: 4em;
+                align-content: center;
+                margin-left: 2%;
+            }
+        }
+
+        #cart {
+            background-color: beige;
+            border-radius: 50%;
+            height: 3.5em;
+            width: 4em;
+            align-content: center;
+            margin-top: 6%;
+        }
+
+        #favorites {
+            background-color: aquamarine;
+            height: 3.5em;
+            width: 3.5em;
+            border-radius: 50%;
+            align-content: center;
+            margin-top: 6%;
+        }
+
+    }
+}
+
+footer {
+    min-height: 60em;
+    color: white;
+    background-color: rgba(241, 239, 239, 0.3);
+    border-top: 1px;
+    border: 0px;
+    border-top: 1px;
+    border-color: var(--selection-border-color);
+    border-style: solid;
+
+    .opties {
+        min-height: 20em;
+        border: 0px;
+        border-bottom: 1px;
+        border-style: solid;
+    }
+
+    .opmaakfooter {
+        min-height: 40em;
+        display: grid;
+        grid-template-columns: repeat(8, 12.5%);
+        grid-template-rows: repeat(8, 12.5%);
+
+        #logocyberlife {
+            background-color: var(--placeholder-color);
+            background-repeat: no-repeat;
+            background-size: cover;
+            grid-row-start: 6;
+            grid-row-end: 9;
+            grid-column-start: 3;
+            grid-column-end: 7;
+        }
+
+        #contact {
+            background-color: aquamarine;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        #copyright {
+            background-color: aqua;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        #box {
+            background-color: rgb(120, 183, 184);
+            grid-column-start: 3;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: 6;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.montserrat-cyberlife {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.maingrid {
+    display: grid;
+    
+    grid-template-columns: repeat(5, 20%);
+    min-height: fit-content;
+
+    .legeruimte {
+        background-color: unset;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        border: 1px;
+        border-top: 1px;
+        border-bottom: 1px;
+        border-left: 1px;
+        border-color: var(--border-color);
+        border-style: solid;
+        min-height: 3em;
+    }
+
+
+    #productmenu {
+      grid-row-start: 1;
+      grid-row-end: 12;
+    }
+
+    #mainmenu {
+       grid-row-start: 4;
+       grid-row-end: 12;
+    }
+
+    .menu {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: var(--true-background-color);
+        border: 0px;
+        overflow-y: scroll;
+        color: white;
+
+        .dropdown {
+            width:inherit;
+            position: relative;
+            height: 180%;
+            align-content: center;
+            font-size: larger;
+        }
+
+        
+        .dropdown-content {
+            display: none;
+            background-color: rgba(124, 161, 199, 0.8);
+            width: inherit;
+
+            a {
+                font-size: 125%;
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        .dropdown:hover .dropdown-content {
+
+            display: block;
+        }
+    }
+
+    #fotoextra {
+        overflow-x: auto;
+        background-color: var(--selection-background-color);
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 5%;
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        border: 0px;
+        border-color: var(--selection-border-color);
+        border-style: solid;
+        height: 30em;
+    }
+
+    #foto {
+        align-content: center;
+        margin: 5%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100%;
+    }
+
+    #echtefoto {
+        background-image: url(fotos/Nn3vQfT5fzwXUCo5yxw37WIf.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #fillerruimte {
+        background-color: var(--true-background-color);
+        height: 4em;
+        border-color: var(--border-color);
+        border-style: solid;
+    }
+
+    .filler1 {
+        grid-row-start: 1;
+        border: 0px;
+        border-bottom: 1px;
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
+    .filler2 {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        border: 0px;
+        border-top: 1px;
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
+    #koop {
+        color: white;
+        font-size: larger;
+        width: fit-content;
+        align-content: center;
+
+        #kooptekst {
+            color: white;
+        }
+    }
+
+    .view {
+        overflow-x: auto;
+        background-color: var(--selection-background-color);
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 5%;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        border: 1px;
+        border-right: 0px;
+        border-color: var(--selection-border-color);
+        border-style: solid;
+
+        .buybutton {}
+    }
+
+    .buy {
+        height: 4em;
+        background-color: var(--true-background-color);
+        grid-column-start: 2;
+        grid-column-end: 6;
+        border: 0px;
+        border-top: 1px;
+        border-bottom: 1px;
+        border-color: var(--border-color);
+        border-style: solid;
+
+
+        #android {
+
+            height: fit-content;
+        }
+
+        #onderdeel {}
+
+        #review {}
+    }
+}
+
+#androidGrid {
+
+    display: flex;
+
+    .android {
+        background-color: var(--placeholder-color);
+        margin: var(--margin);
+        min-width: 30%;
+        padding-top: 38%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #A1 {
+        background-image: url(fotos/HW800.png);
+        background-color: unset;
+    }
+
+    #A2 {}
+
+    #A3 {}
+
+    #A4 {}
+
+    #A5 {}
+
+    #A6 {}
+}
+
+#onderdeelGrid {
+
+    display: flex;
+
+    .onderdeel {
+        background-color: var(--placeholder-color);
+        margin: var(--margin);
+        min-width: 30%;
+        padding-top: 38%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #O1 {}
+
+    #O2 {}
+
+    #O3 {}
+
+    #O4 {}
+
+    #O5 {}
+}
+
+#reviewGrid {
+
+    display: flex;
+
+    .review {
+        background-color: var(--placeholder-color);
+        margin: var(--margin);
+        min-width: 30%;
+        padding-top: 38%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #R1 {}
+
+    #R2 {}
+
+    #R3 {}
+
+    #R4 {}
+
+    #R5 {}
+}
