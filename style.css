@@ -7,10 +7,11 @@
 :root {
     --placeholder-color: lightblue;
     --margin: 4%;
-    --true-background-color: rgba(108, 154, 204, 0.6);
-    --selection-background-color: rgba(241, 239, 239, 0.2);
-    --border-color: rgb(132, 191, 255);
-    --selection-border-color: white;
+    --true-background-color: rgba(255, 255, 255, 0.747);
+    --selection-background-color: rgba(255, 255, 255, 0.225);
+    --border-color: rgb(157, 157, 157);
+    --selection-border-color: rgb(129, 132, 141);
+    --text-color: rgb(0, 0, 0);
 }
 
 html {
@@ -28,7 +29,7 @@ body {
 header {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     height: fit-content;
     border: 0px;
     border-bottom: 1px;
@@ -36,24 +37,25 @@ header {
     border-style: solid;
     align-items: center;
     justify-items: center;
+    background-color: white;
 
     #logo {
-        background-color: var(--placeholder-color);
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 1;
-        grid-row-end: 5;
+        grid-row-end: 4;
         height: 85%;
         width: 100%;
+        background-image: url(fotos/cyberlifewhite.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
     }
 
     #searchbar {
         background-color: rgba(241, 239, 239, 0.7);
         grid-column-start: 1;
         grid-column-end: 10;
-        grid-row-start: 5;
+        grid-row-start: 4;
         grid-column-end: 10;
         min-width: 70%;
         min-height: 40%;
@@ -63,13 +65,18 @@ header {
             margin: 2%;
             margin-top: 5%;
             margin-bottom: 5%;
+            background-color: transparent;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            padding: 8px;
+            border-radius: 8px;
         }
     }
 
     #allthree {
         display: flex;
-        grid-column-start: 7;
-        grid-column-end: 10;
+        grid-column-start: 6;
+        grid-column-end: 9;
         height: 80%;
         width: fit-content;
 
@@ -81,6 +88,7 @@ header {
             height: 85%;
             aspect-ratio: 3/1;
             align-content: center;
+            color: var(--text-color);
 
             a {
                 text-decoration: none;
@@ -153,19 +161,11 @@ header {
 
 footer {
     min-height: fit-content;
-    background-color: rgba(241, 239, 239, 0.3);
+    background-color: rgb(255, 255, 255);
     border: 0px;
     border-top: 1px;
     border-color: var(--selection-border-color);
     border-style: solid;
-
-    .opties {
-        aspect-ratio: 1/0.33;
-        border: 0px;
-        border-bottom: 1px;
-        border-style: solid;
-        border-color: var(--selection-border-color);
-    }
 
     .opmaakfooter {
         aspect-ratio: 1/0.65;
@@ -174,31 +174,44 @@ footer {
         grid-template-rows: repeat(8, 12.5%);
 
         #logocyberlife {
-            background-color: var(--placeholder-color);
             background-repeat: no-repeat;
             background-size: cover;
             grid-row-start: 6;
             grid-row-end: 9;
-            grid-column-start: 3;
-            grid-column-end: 7;
+            grid-column-start: 2;
+            grid-column-end: 8;
+            background-image: url(fotos/cyberlifewhite.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+                height: inherit;
+                width: inherit;
+            }
         }
 
         #contact {
-            background-color: aquamarine;
-            height: fit-content;
-            width: fit-content;
+            a {
+                text-decoration: none;
+                display: inline-block;
+                color: var(--text-color);
+                font-size: larger;
+            }
         }
 
         #copyright {
-            background-color: aqua;
             height: fit-content;
             width: fit-content;
+            font-size: larger;
+            color: var(--text-color);
         }
 
         #box {
             background-color: rgb(120, 183, 184);
-            grid-column-start: 3;
-            grid-column-end: 7;
+            grid-column-start: 2;
+            grid-column-end: 8;
             grid-row-start: 1;
             grid-row-end: 6;
 
@@ -238,6 +251,7 @@ footer {
     #mainmenu {
         grid-row-start: 4;
         grid-row-end: 12;
+        color: var(--text-color);
     }
 
     .menu {
@@ -259,12 +273,11 @@ footer {
 
         .dropdown-content {
             display: none;
-            background-color: rgba(124, 161, 199, 0.8); /*AANPASSEN*/
             width: inherit;
 
             a {
                 font-size: 125%;
-                color: black;
+                color: var(--text-color);
                 text-decoration: none;
             }
         }
@@ -299,10 +312,16 @@ footer {
         align-self: center;
 
         #kooptekst {
-            color: black;
+            color: var(--text-color);
             size: 80%;
             max-width: fit-content;
             text-wrap: wrap;
+            text-decoration: none;
+            display: inline-block;
+            height: inherit;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            margin: 6%;
         }
     }
 
@@ -349,6 +368,7 @@ footer {
         border-right: 0px;
         border-color: var(--selection-border-color);
         border-style: solid;
+        color: var(--text-color);
 
         .buybutton {}
     }
@@ -361,6 +381,7 @@ footer {
         border: 0px;
         border-color: var(--border-color);
         border-style: solid;
+        color: var(--text-color);
 
         #android {
             height: fit-content;
