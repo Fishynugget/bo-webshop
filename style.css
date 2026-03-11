@@ -12,18 +12,59 @@
     --border-color: rgb(157, 157, 157);
     --selection-border-color: rgb(129, 132, 141);
     --text-color: rgb(0, 0, 0);
+    --font-size: 1vw;
 }
 
 html {
     font-size: 62.5%;
 }
 
+.sidebar {
+    background-color: white;
+}
+
+#sidebarheader1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#sidebarheader2 {
+    grid-column-start: 17;
+    grid-column-end: 21;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#sidebarmain1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+#sidebarmain2 {
+    grid-column-start: 17;
+    grid-column-end: 21;
+}
+
+#sidebarfooter1 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+#sidebarfooter2 {
+    grid-column-start: 16;
+    grid-column-end: 21;
+}
 
 body {
     background-image: url(fotos/futuristic-detroit-become-human-e3vakx08mu10tnli.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(20, 5%);
 }
 
 header {
@@ -32,27 +73,35 @@ header {
     grid-template-rows: repeat(5, 1fr);
     height: fit-content;
     border: 0px;
-    border-bottom: 1px;
-    border-color: var(--border-color);
-    border-style: solid;
     align-items: center;
     justify-items: center;
     background-color: white;
+    grid-column-start: 5;
+    grid-column-end: 17;
+    grid-row-start: 1;
 
     #logo {
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 4;
-        height: 85%;
+        aspect-ratio: 1/1;
         width: 100%;
         background-image: url(fotos/cyberlifewhite.png);
         background-repeat: no-repeat;
         background-size: contain;
+        align-content: center;
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            width: inherit;
+            aspect-ratio: 1/1;
+        }
     }
 
     #searchbar {
-        background-color: rgba(241, 239, 239, 0.7);
+        background-color: rgba(239, 238, 238, 0.7);
         grid-column-start: 1;
         grid-column-end: 10;
         grid-row-start: 4;
@@ -60,6 +109,7 @@ header {
         min-width: 70%;
         min-height: 40%;
         border-radius: 10px;
+        border: 1px solid rgb(151, 151, 151);
 
         .search {
             margin: 2%;
@@ -67,26 +117,24 @@ header {
             margin-bottom: 5%;
             background-color: transparent;
             outline: none;
-            border: 1px solid rgba(0, 0, 0, 0.4);
+            border: 0px;
             padding: 8px;
             border-radius: 8px;
+            font-size: var(--font-size);
         }
     }
 
     #allthree {
         display: flex;
-        grid-column-start: 6;
-        grid-column-end: 9;
+        grid-column-start: 7;
+        grid-column-end: 10;
         height: 80%;
         width: fit-content;
 
         #login {
             margin-top: 5%;
-            margin-left: 2%;
-            margin-right: 2%;
             display: flex;
             height: 85%;
-            aspect-ratio: 3/1;
             align-content: center;
             color: var(--text-color);
 
@@ -114,16 +162,18 @@ header {
                 height: inherit;
                 align-content: center;
                 margin-left: 2%;
+                margin-top: 6%;
+                font-size: var(--font-size);
+                text-wrap: nowrap;
             }
         }
 
         #cart {
-            background-color: beige;
             height: 85%;
             aspect-ratio: 1/1;
             align-content: center;
             margin-top: 6%;
-            background-image: url(fotos/shopping-cart-logo-icon-shopping-cart.jpg);
+            background-image: url(fotos/cart.png);
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -152,7 +202,6 @@ header {
                 height: inherit;
                 aspect-ratio: 1/1;
                 border-radius: 50%;
-                margin: 6%;
             }
         }
 
@@ -163,9 +212,10 @@ footer {
     min-height: fit-content;
     background-color: rgb(255, 255, 255);
     border: 0px;
-    border-top: 1px;
-    border-color: var(--selection-border-color);
-    border-style: solid;
+    font-size: var(--font-size);
+    grid-column-start: 6;
+    grid-column-end: 16;
+    grid-row-start: 3;
 
     .opmaakfooter {
         aspect-ratio: 1/0.65;
@@ -174,21 +224,26 @@ footer {
         grid-template-rows: repeat(8, 12.5%);
 
         #logocyberlife {
-            background-repeat: no-repeat;
-            background-size: cover;
             grid-row-start: 6;
             grid-row-end: 9;
-            grid-column-start: 2;
-            grid-column-end: 8;
-            background-image: url(fotos/cyberlifewhite.png);
-            background-repeat: no-repeat;
-            background-size: contain;
+            grid-column-start: 1;
+            grid-column-end: 10;
+            border: 0px;
+            display: flex;
+            flex-direction: column-reverse;
 
-            a {
-                text-decoration: none;
-                display: inline-block;
-                height: inherit;
-                width: inherit;
+            p {
+                width: fit-content;
+                align-self: center;
+                color: var(--selection-border-color);
+            }
+
+            .footerlogo {
+                background-image: url(fotos/cyberlifewhite.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 30%;
+                aspect-ratio: 1/1;
             }
         }
 
@@ -209,9 +264,8 @@ footer {
         }
 
         #box {
-            background-color: rgb(120, 183, 184);
-            grid-column-start: 2;
-            grid-column-end: 8;
+            grid-column-start: 1;
+            grid-column-end: 10;
             grid-row-start: 1;
             grid-row-end: 6;
 
@@ -223,6 +277,12 @@ footer {
     }
 }
 
+main {
+    grid-column-start: 5;
+    grid-column-end: 17;
+    grid-row-start: 2;
+}
+
 .montserrat-cyberlife {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -231,12 +291,12 @@ footer {
 
 .maingrid {
     display: grid;
-    grid-template-columns: repeat(5, 20%);
-    min-height: fit-content;
+    grid-template-columns: repeat(9, 1fr);
+    font-size: var(--font-size);
 
     .legeruimte {
         grid-column-start: 2;
-        grid-column-end: 6;
+        grid-column-end: 9;
         border: 1px;
         border-right: 0px;
         border-color: var(--border-color);
@@ -249,9 +309,15 @@ footer {
     }
 
     #mainmenu {
-        grid-row-start: 4;
+        grid-row-start: 3;
         grid-row-end: 12;
         color: var(--text-color);
+    }
+
+    .side {
+        grid-column-start: 9;
+        grid-column-end: 10;
+        background-color: var(--true-background-color);
     }
 
     .menu {
@@ -292,10 +358,10 @@ footer {
         margin: 2%;
         margin-left: 10%;
         margin-right: 10%;
-        aspect-ratio: 1/0.564;
+        aspect-ratio: 2/0.2;
         grid-row-start: 2;
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 10;
         border: 1px;
         border-color: var(--selection-border-color);
         border-style: solid;
@@ -337,23 +403,14 @@ footer {
         border: 0px;
         border-bottom: 1px;
         grid-column-start: 1;
-        grid-column-end: 6;
-    }
-
-    .filler2 {
-        grid-row-start: 3;
-        grid-column-start: 1;
-        border: 0px;
-        border-top: 1px;
-        grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 10;
     }
 
     .filler3 {
-        grid-column-start: 1;
+
         border: 0px;
-        grid-column-start: 2;
-        grid-column-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 10;
     }
 
     .view {
@@ -362,10 +419,10 @@ footer {
         margin-top: 2%;
         margin-bottom: 2%;
         margin-left: 5%;
+        margin-right: 5%;
         grid-column-start: 2;
-        grid-column-end: 6;
+        grid-column-end: 9;
         border: 1px;
-        border-right: 0px;
         border-color: var(--selection-border-color);
         border-style: solid;
         color: var(--text-color);
@@ -377,7 +434,7 @@ footer {
         aspect-ratio: 1/0.07;
         background-color: var(--true-background-color);
         grid-column-start: 2;
-        grid-column-end: 6;
+        grid-column-end: 9;
         border: 0px;
         border-color: var(--border-color);
         border-style: solid;
@@ -405,8 +462,8 @@ footer {
         margin: var(--margin);
         min-width: 30%;
         aspect-ratio: 1/1.365;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
         background-size: contain;
         background-repeat: no-repeat;
         align-content: flex-end;
@@ -445,8 +502,8 @@ footer {
         margin: var(--margin);
         min-width: 30%;
         aspect-ratio: 1/1.365;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
         background-size: contain;
         background-repeat: no-repeat;
         align-content: flex-end;
@@ -463,13 +520,39 @@ footer {
     #O5 {}
 }
 
+#serviceGrid {
+    display: flex;
+
+    .service {
+        background-color: var(--placeholder-color);
+        margin: var(--margin);
+        min-width: 30%;
+        aspect-ratio: 1/1.365;
+        margin-left: 10%;
+        margin-right: 10%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        align-content: flex-end;
+    }
+
+    #S1 {}
+
+    #S2 {}
+
+    #S3 {}
+
+    #S4 {}
+
+    #S5 {}
+}
+
 #reviewGrid {
     display: flex;
 
     .review {
         background-color: unset;
         margin: var(--margin);
-        min-width: 30%;
+        min-width: 40%;
         aspect-ratio: 1/1.365;
         margin-left: 5%;
         margin-right: 5%;
