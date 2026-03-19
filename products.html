@@ -1,137 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
     <section class="sidebar" id="sidebarheader1"></section>
     <section class="sidebar" id="sidebarheader2"></section>
-    <section class="sidebar" id="sidebarmain1"></section>
+    <section class="sidebar" id="sidebarmain1">
+        <section class="menu" id="productmenu">
+            <section class="dropdown">
+                Menu
+                <section class="dropdown-content">
+                    <a href="#login">back to top</a><br><br>
+                    <a href="index.html">Back to main page</a><br><br>
+                    <a href="#optie">Need help?</a>
+                    <div class="filters">
+                        <button onclick="filterProducten('assistant')">assistant</button>
+                        <button onclick="filterProducten('childcare')">childcare</button>
+                        <button onclick="filterProducten('partner')">partner</button>
+                        <button onclick="filterProducten('security')">security</button>
+                        <button onclick="filterProducten('diy')">diy</button>
+                        <button onclick="filterProducten('heavylifting')">heavylifting</button>
+                        <button onclick="filterProducten('alles')">all</button>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </section>
     <section class="sidebar" id="sidebarmain2"></section>
     <section class="sidebar" id="sidebarfooter1"></section>
     <section class="sidebar" id="sidebarfooter2"></section>
     <header>
-         <section id="logo">
+        <section id="logo">
             <a href="index.html"></a>
         </section>
         <section id="searchbar">
-            
-            <input  type="text" class="search" placeholder="search"></input>
+
+            <input id="zoek" type="text" class="search" placeholder="search"></input>
         </section>
         <section id="allthree">
             <section id="cart">
-               <a href="cart.html"></a>
+                <a href="cart/cart.html"></a>
             </section>
             <section id="login">
                 <section class="loginimage">
+                    <a href="login/login.html"></a>
                 </section>
                 <section class="logintext">
                     <p class="login">Log in to<br>access your<br>account</p>
                 </section>
             </section>
             <section id="favorites">
+                <a href="favorites/favorites.html"></a>
             </section>
         </section>
     </header>
     <main>
         <section class="maingrid">
-             <section class="menu" id="productmenu">
-                <section class="dropdown">
-                    Menu
-                    <section class="dropdown-content">
-                       <a href="#login">back to top</a><br><br>
-                       <a href="index.html">Back to main page</a><br><br>
-                       <a href="#optie">Need help?</a>
-                    </section>
-                </section>
-             </section>
-             <section class="side" id="productmenu"></section>
-         <section class="buy" id="android">
-                Our best selection of androids
+            <section class="side" id="productside"></section>
+            <section class="sidelinks" id="productside"></section>
+            <section class="buy" id="android">
+                <p id="buytext">Our best selection of androids</p>
             </section>
             <section class="legeruimte">
 
-                <section class="view" id="androidGrid">
-                    <section id="A1" class="android">
+                <ul class="view" id="androidGrid">
+                    <li id="product" class="android" data-categorie="assistant">
+                        <p id="product-title">assistant</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="A2" class="android">
+                    </li>
+                    <li id="product" class="android" data-categorie="childcare">
+                        <p id="product-title">childcare</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="A3" class="android">
+                    </li>
+                    <li id="product" class="android" data-categorie="childcare">
+                        <p id="product-title">childcare</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="A4" class="android">
+                    </li>
+                    <li id="product" class="android" data-categorie="partner">
+                        <p id="product-title">partner</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="A5" class="android">
+                    </li>
+                    <li id="product" class="android" data-categorie="security">
+                        <p id="product-title">security</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="A6" class="android">
+                    </li>
+                    <li id="product" class="android" data-categorie="diy">
+                        <p id="product-title">diy</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                </section>
+                    </li>
+                </ul>
             </section>
 
             <section class="buy" id="onderdeel">
-                Android won't work properly?
+                <p id="buytext">Android won't work properly?</p>
             </section>
             <section class="legeruimte">
 
-                <section class="view" id="onderdeelGrid">
-                    <section id="O1" class="onderdeel">
-                        onderdeel 1
+                <ul class="view" id="onderdeelGrid">
+                    <li id="product" class="onderdeel" data-categorie="">
+                        <p id="product-title">onderdeel</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="O2" class="onderdeel">
-                        onderdeel 2
+                    </li>
+                    <li id="product" class="onderdeel" data-categorie="">
+                        <p id="product-title">onderdeel</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="O3" class="onderdeel">
-                        onderdeel 3
+                    </li>
+                    <li id="product" class="onderdeel" data-categorie="">
+                        <p id="product-title">onderdeel</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="O4" class="onderdeel">
-                        onderdeel 4
+                    </li>
+                    <li id="product" class="onderdeel" data-categorie="">
+                        <p id="product-title">onderdeel</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="O5" class="onderdeel">
-                        onderdeel 5
+                    </li>
+                    <li id="product" class="onderdeel" data-categorie="">
+                        <p id="product-title">onderdeel</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                </section>
+                    </li>
+                </ul>
             </section>
 
             <section class="buy" id="service">
-                Need a specific service?
+                <p id="buytext">Need a specific service?</p>
             </section>
             <section class="legeruimte">
 
-                <section class="view" id="serviceGrid">
-                    <section id="S1" class="service">
-                        onderdeel 1
+                <ul class="view" id="serviceGrid">
+                    <li id="product" class="service" data-categorie="childcare">
+                        <p id="product-title">childcare</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="S2" class="service">
-                        onderdeel 2
+                    </li>
+                    <li id="product" class="service" data-categorie="security">
+                        <p id="product-title">security</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="S3" class="service">
-                        onderdeel 3
+                    </li>
+                    <li id="product" class="service" data-categorie="diy">
+                        <p id="product-title">diy</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="S4" class="service">
-                        onderdeel 4
+                    </li>
+                    <li id="product" class="service" data-categorie="heavylifting">
+                        <p id="product-title">heavylifting</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                    <section id="S5" class="service">
-                        onderdeel 5
+                    </li>
+                    <li id="product" class="service" data-categorie="assistant">
+                        <p id="product-title">assistant</p>
                         <button class="buybutton">Add to cart</button>
-                    </section>
-                </section>
+                    </li>
+                </ul>
             </section>
         </section>
     </main>
@@ -142,14 +164,24 @@
                 <section class="footerlogo"></section>
             </section>
             <section id="box">
-                
+
                 <section id="contact">
                     <a href="https://www.quanticdream.com/en/contact">Contact us</a>
                 </section>
                 <section id="copyright">
-                    copyright ding?
+                    terms of service
+                </section>
+                <section id="work">
+                    working at cyberlife
+                </section>
+                <section id="news">
+                    news
+                </section>
+                <section id="return">
+                    return policy
                 </section>
             </section>
     </footer>
 </body>
+
 </html>

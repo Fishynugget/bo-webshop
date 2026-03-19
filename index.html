@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -16,7 +17,18 @@
 <body>
     <section class="sidebar" id="sidebarheader1"></section>
     <section class="sidebar" id="sidebarheader2"></section>
-    <section class="sidebar" id="sidebarmain1"></section>
+    <section class="sidebar" id="sidebarmain1">
+        <section class="menu" id="mainmenu">
+                <section class="dropdown">
+                    Menu
+                    <section class="dropdown-content">
+                        <a href="#login">back to top</a><br><br>
+                        <a href="products.html">Our products</a><br><br>
+                        <a href="#optie">Bottom of site</a>
+                    </section>
+                </section>
+        </section>
+    </section>
     <section class="sidebar" id="sidebarmain2"></section>
     <section class="sidebar" id="sidebarfooter1"></section>
     <section class="sidebar" id="sidebarfooter2"></section>
@@ -25,7 +37,7 @@
             <a href="index.html"></a>
         </section>
         <section id="searchbar">
-            <input type="text" class="search" placeholder="search"></input>
+            <input id="zoek" type="text" class="search" placeholder="search"></input>
         </section>
         <section id="allthree">
             <section id="cart">
@@ -47,16 +59,8 @@
     </header>
     <main>
         <section class="maingrid">
-            <section class="menu" id="mainmenu">
-                <section class="dropdown">
-                    Menu
-                    <section class="dropdown-content">
-                        <a href="#login">back to top</a><br><br>
-                        <a href="products.html">Our products</a><br><br>
-                        <a href="#optie">Bottom of site</a>
-                    </section>
-                </section>
-            </section>
+            <section class="side" id="mainside"></section>
+            <section class="sidelinks" id="mainside"></section>
             <section class="side" id="mainmenu"></section>
 
             <section id="fillerruimte" class="filler1"></section>
@@ -67,9 +71,6 @@
                         <a href="products.html" id="kooptekst">Buy now and enjoy stress free fun!</a>
                     </section>
             </section>
-
-
-            
 
             <section class="buy" id="review">
                 Customer reviews
@@ -130,7 +131,16 @@
                     <a href="https://www.quanticdream.com/en/contact">Contact us</a>
                 </section>
                 <section id="copyright">
-                    copyright ding?
+                    terms of service
+                </section>
+                <section id="work">
+                    working at cyberlife
+                </section>
+                <section id="news">
+                    news
+                </section>
+                <section id="return">
+                    return policy
                 </section>
             </section>
         </section>

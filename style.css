@@ -40,6 +40,48 @@ html {
 #sidebarmain1 {
     grid-column-start: 1;
     grid-column-end: 5;
+    display: grid;
+
+    .menu {
+        background-color: var(--true-background-color);
+        border: 0px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+
+        .dropdown {
+            width: inherit;
+            position: relative;
+            height: 180%;
+            align-content: center;
+            font-size: larger;
+        }
+
+        .dropdown-content {
+            display: none;
+            width: inherit;
+
+            a {
+                font-size: 125%;
+                color: var(--text-color);
+                text-decoration: none;
+            }
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    }
+
+    #productmenu {
+        grid-row-start: 1;
+        grid-row-end: 12;
+    }
+
+    #mainmenu {
+        grid-row-start: 3;
+        grid-row-end: 12;
+        color: var(--text-color);
+    }
 }
 
 #sidebarmain2 {
@@ -146,7 +188,6 @@ header {
                 margin: 6%;
             }
 
-
             .loginimage {
                 border: 0px;
                 aspect-ratio: 1/1;
@@ -247,32 +288,35 @@ footer {
             }
         }
 
-        #contact {
-            a {
-                text-decoration: none;
-                display: inline-block;
-                color: var(--text-color);
-                font-size: larger;
-            }
-        }
-
-        #copyright {
-            height: fit-content;
-            width: fit-content;
-            font-size: larger;
-            color: var(--text-color);
-        }
-
         #box {
             grid-column-start: 1;
             grid-column-end: 10;
             grid-row-start: 1;
             grid-row-end: 6;
-
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
+
+            section {
+                border-left: 1px solid rgb(196, 196, 196);
+                margin: 1%;
+                padding-left: 1%;
+                color: var(--selection-border-color);
+                height: fit-content;
+                width: fit-content;
+                font-size: larger;
+            }
+
+            #contact {
+                border: 0px;
+
+                a {
+                    color: var(--selection-border-color);
+                    text-decoration: none;
+                    display: inline-block;
+                }
+            }
         }
     }
 }
@@ -303,54 +347,26 @@ main {
         border-style: solid;
     }
 
-    #productmenu {
-        grid-row-start: 1;
-        grid-row-end: 12;
-    }
-
-    #mainmenu {
-        grid-row-start: 3;
-        grid-row-end: 12;
-        color: var(--text-color);
-    }
-
     .side {
         grid-column-start: 9;
         grid-column-end: 10;
+    }
+
+    .sidelinks {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    #productside {
+        grid-row-start: 1;
+        grid-row-end: 12;
         background-color: var(--true-background-color);
     }
 
-    .menu {
-        grid-column-start: 1;
-        grid-column-end: 2;
+    #mainside {
+        grid-row-start: 4;
+        grid-row-end: 12;
         background-color: var(--true-background-color);
-        border: 0px;
-        overflow-y: scroll;
-        scrollbar-width: none;
-
-        .dropdown {
-            width: inherit;
-            position: relative;
-            height: 180%;
-            align-content: center;
-            font-size: larger;
-        }
-
-
-        .dropdown-content {
-            display: none;
-            width: inherit;
-
-            a {
-                font-size: 125%;
-                color: var(--text-color);
-                text-decoration: none;
-            }
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
     }
 
     #fotoextra {
@@ -407,7 +423,6 @@ main {
     }
 
     .filler3 {
-
         border: 0px;
         grid-column-start: 1;
         grid-column-end: 10;
@@ -426,12 +441,9 @@ main {
         border-color: var(--selection-border-color);
         border-style: solid;
         color: var(--text-color);
-
-        .buybutton {}
     }
 
     .buy {
-        aspect-ratio: 1/0.07;
         background-color: var(--true-background-color);
         grid-column-start: 2;
         grid-column-end: 9;
@@ -439,9 +451,14 @@ main {
         border-color: var(--border-color);
         border-style: solid;
         color: var(--text-color);
+        align-content: center;
+        font-size: 1.3vw;
+
+        #buytext {
+            justify-self: center;
+        }
 
         #android {
-            height: fit-content;
             border-top: 1px;
             border-bottom: 1px;
         }
@@ -451,7 +468,21 @@ main {
             border-bottom: 1px;
         }
 
-        #review {}
+        #service {
+            border-top: 1px;
+            border-bottom: 1px;
+        }
+    }
+}
+
+#product {
+    display: inline-block;
+    justify-items: center;
+
+    .buybutton {
+        width: 60%;
+        font-size: var(--font-size);
+        display: block;
     }
 }
 
@@ -469,27 +500,27 @@ main {
         align-content: flex-end;
     }
 
-    #A1 {
+    .android:nth-child(1) {
         background-image: url(fotos/HW800.png);
     }
 
-    #A2 {
+    .android:nth-child(2) {
         background-image: url(fotos/AZ110_Android.png);
     }
 
-    #A3 {
+    .android:nth-child(3) {
         background-image: url(fotos/CP100_Android.png);
     }
 
-    #A4 {
+    .android:nth-child(4) {
         background-image: url(fotos/GJ200_android.png);
     }
 
-    #A5 {
+    .android:nth-child(5) {
         background-image: url(fotos/android.png);
     }
 
-    #A6 {
+    .android:nth-child(6) {
         background-image: url(fotos/NC200_Android.png);
     }
 }
@@ -509,15 +540,15 @@ main {
         align-content: flex-end;
     }
 
-    #O1 {}
+    .onderdeel:nth-child(1) {}
 
-    #O2 {}
+    .onderdeel:nth-child(2) {}
 
-    #O3 {}
+    .onderdeel:nth-child(3) {}
 
-    #O4 {}
+    .onderdeel:nth-child(4) {}
 
-    #O5 {}
+    .onderdeel:nth-child(5) {}
 }
 
 #serviceGrid {
@@ -535,15 +566,15 @@ main {
         align-content: flex-end;
     }
 
-    #S1 {}
+    .service:nth-child(1) {}
 
-    #S2 {}
+    .service:nth-child(2) {}
 
-    #S3 {}
+    .service:nth-child(3) {}
 
-    #S4 {}
+    .service:nth-child(4) {}
 
-    #S5 {}
+    .service:nth-child(5) {}
 }
 
 #reviewGrid {
