@@ -1,7 +1,5 @@
 # bo-webshop
 
-## De layout enzo is nog niet af.
-
 ## Welke file is wat? :
 ### cart hoort bij de shopping cart.
 ### favorites hoort bij favorites maar dat is voor nu gewoon decoratie.
