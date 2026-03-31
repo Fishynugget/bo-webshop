@@ -72,6 +72,16 @@ html {
         }
     }
 
+    .filters {
+        font-size: var(--font-size);
+        
+        button {
+            background-color: white;
+            border: 1px solid var(--selection-border-color);
+            margin: 1.5%;
+        }
+    }
+
     #productmenu {
         grid-row-start: 1;
         grid-row-end: 12;
@@ -151,7 +161,7 @@ header {
         min-width: 70%;
         min-height: 40%;
         border-radius: 10px;
-        border: 1px solid rgb(151, 151, 151);
+        border: 1px solid rgb(188, 188, 188);
 
         .search {
             margin: 2%;
@@ -163,6 +173,7 @@ header {
             padding: 8px;
             border-radius: 8px;
             font-size: var(--font-size);
+            min-width: inherit;
         }
     }
 
@@ -341,10 +352,7 @@ main {
     .legeruimte {
         grid-column-start: 2;
         grid-column-end: 9;
-        border: 1px;
-        border-right: 0px;
-        border-color: var(--border-color);
-        border-style: solid;
+        border: 0px;
     }
 
     .side {
@@ -369,28 +377,53 @@ main {
         background-color: var(--true-background-color);
     }
 
+    .fotoside {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: var(--true-background-color);
+    }
+
+    #fotoleft {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    #fotoright {
+        grid-column-start: 9;
+        grid-column-end: 10;
+    }
+
     #fotoextra {
         background-color: var(--selection-background-color);
-        margin: 2%;
-        margin-left: 10%;
-        margin-right: 10%;
-        aspect-ratio: 2/0.2;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
         grid-row-start: 2;
-        grid-column-start: 1;
-        grid-column-end: 10;
+        grid-column-start: 2;
+        grid-column-end: 9;
         border: 1px;
         border-color: var(--selection-border-color);
         border-style: solid;
-        background-image: url(fotos/Nn3vQfT5fzwXUCo5yxw37WIf.jpg);
-        background-repeat: no-repeat;
-        background-size: contain;
         display: flex;
+        justify-content: center;
+
+        .fotoextrafoto {
+            background-image: url(fotos/Nn3vQfT5fzwXUCo5yxw37WIf.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            display: flex;
+            aspect-ratio: 2/1;
+        }
     }
 
     #koop {
         font-size: larger;
         align-content: center;
-        margin: 2%;
+        margin: 5%;
         align-self: center;
 
         #kooptekst {
@@ -417,7 +450,6 @@ main {
     .filler1 {
         grid-row-start: 1;
         border: 0px;
-        border-bottom: 1px;
         grid-column-start: 1;
         grid-column-end: 10;
     }
@@ -479,6 +511,10 @@ main {
     display: inline-block;
     justify-items: center;
 
+    #product-title {
+        display: none;
+    }
+
     .buybutton {
         width: 60%;
         font-size: var(--font-size);
@@ -529,7 +565,7 @@ main {
     display: flex;
 
     .onderdeel {
-        background-color: var(--placeholder-color);
+        background-color: rgb(230, 230, 230);
         margin: var(--margin);
         min-width: 30%;
         aspect-ratio: 1/1.365;
@@ -537,25 +573,36 @@ main {
         margin-right: 10%;
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: center;
         align-content: flex-end;
     }
 
-    .onderdeel:nth-child(1) {}
+    .onderdeel:nth-child(1) {
+        background-image: url(fotos/thirium310.png);
+    }
 
-    .onderdeel:nth-child(2) {}
+    .onderdeel:nth-child(2) {
+        background-image: url(fotos/android_eye.png);
+    }
 
-    .onderdeel:nth-child(3) {}
+    .onderdeel:nth-child(3) {
+        background-image: url(fotos/thiriumpump.png);
+    }
 
-    .onderdeel:nth-child(4) {}
+    .onderdeel:nth-child(4) {
+        background-image: url(fotos/audio_android.png);
+    }
 
-    .onderdeel:nth-child(5) {}
+    .onderdeel:nth-child(5) {
+        background-image: url(fotos/legjoint.png);
+    }
 }
 
 #serviceGrid {
     display: flex;
 
     .service {
-        background-color: var(--placeholder-color);
+        background-color: rgb(230, 230, 230);
         margin: var(--margin);
         min-width: 30%;
         aspect-ratio: 1/1.365;
@@ -563,18 +610,29 @@ main {
         margin-right: 10%;
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: center;
         align-content: flex-end;
     }
 
-    .service:nth-child(1) {}
+    .service:nth-child(1) {
+        background-image: url(fotos/caretaker.png);
+    }
 
-    .service:nth-child(2) {}
+    .service:nth-child(2) {
+        background-image: url(fotos/security.png);
+    }
 
-    .service:nth-child(3) {}
+    .service:nth-child(3) {
+        background-image: url(fotos/farming.png);
+    }
 
-    .service:nth-child(4) {}
+    .service:nth-child(4) {
+        background-image: url(fotos/heavyliftinng.png);
+    }
 
-    .service:nth-child(5) {}
+    .service:nth-child(5) {
+        background-image: url(fotos/delivery.png);
+    }
 }
 
 #reviewGrid {
