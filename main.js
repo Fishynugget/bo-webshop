@@ -25,3 +25,20 @@ zoekbalk.addEventListener('input', function () {
         }
     });
 });
+
+function addToCart(productName) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    let index = cart.findIndex((element) => element.name === productName);
+
+    if (index >= 0) {
+        cart[index].amount += 1;
+    } else {
+        cart.push({
+            name: productName,
+            amount: 1
+        });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
