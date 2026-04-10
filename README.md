@@ -1,5 +1,7 @@
 # bo-webshop
 
+## de shopping cart heeft wat problemen op de online versie maar die worden nog gefixed
+
 ## Welke file is wat? :
 ### cart hoort bij de shopping cart.
 ### favorites hoort bij favorites maar dat is voor nu gewoon decoratie.
