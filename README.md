@@ -1,6 +1,6 @@
 # bo-webshop
 
-## de shopping cart heeft wat problemen op de online versie maar die worden nog gefixed
+## De shopping cart is gefixed!
 
 ## Welke file is wat? :
 ### cart hoort bij de shopping cart.

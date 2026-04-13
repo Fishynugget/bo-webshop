@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    background-image: url(/fotos/futuristic-detroit-become-human-e3vakx08mu10tnli.jpg);
+    background-image: url(/bo-webshop/fotos/futuristic-detroit-become-human-e3vakx08mu10tnli.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,7 +55,7 @@ header {
             margin-bottom: 5%;
             aspect-ratio: 1/1;
             width: 30%;
-            background-image: url(/fotos/cyberlifewhite.png);
+            background-image: url(/bo-webshop/fotos/cyberlifewhite.png);
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -183,7 +183,7 @@ footer {
             }
 
             .footerlogo {
-                background-image: url(/fotos/cyberlifewhite.png);
+                background-image: url(/bo-webshop/fotos/cyberlifewhite.png);
                 background-repeat: no-repeat;
                 background-size: contain;
                 width: 30%;
